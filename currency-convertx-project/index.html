@@ -4,16 +4,15 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CurrencyConvertX</title>
+<title>Currency Converter</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="container">
-    <h1>CurrencyConvertX</h1>
-    <p>A simple and user-friendly currency converter application</p>
-    <form>
+    <h1>Currency Converter</h1>
+    <form id="currency-form">
         <label for="amount">Amount:</label>
-        <input type="text" id="amount" name="amount" required>
+        <input type="number" id="amount" name="amount" required>
         <label for="source_currency">Source Currency:</label>
         <input type="text" id="source_currency" name="source_currency" required>
         <label for="target_currency">Target Currency:</label>
@@ -22,5 +21,7 @@
     </form>
     <div id="result"></div>
 </div>
+
+<script src="script.js"></script>
 </body>
 </html>
