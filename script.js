@@ -11,15 +11,14 @@ form.addEventListener('submit', async (e) => {
     try {
         const response = await fetch(`https://api.example.com/convert?amount=${amount}&from=${sourceCurrency}&to=${targetCurrency}`);
         if (!response.ok) {
-            throw new Error(`Failed to fetch data: ${response.status} ${response.statusText}`);
+            throw new Error('Failed to fetch data');
         }
         const data = await response.json();
         const resultBar = document.createElement('div');
         resultBar.textContent = `Converted Amount: ${data.result}`;
-        resultDiv.innerHTML = ''; // Clear previous results
         resultDiv.appendChild(resultBar);
     } catch (error) {
         console.error('Error:', error);
-        resultDiv.textContent = `Failed to fetch data. Please try again. ${error.message}`;
+        resultDiv.textContent = 'Failed to fetch data. Please try again.';
     }
 });
