@@ -1,3 +1,6 @@
+const form = document.getElementById('currency-form');
+const resultDiv = document.getElementById('result');
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     
@@ -11,7 +14,10 @@ form.addEventListener('submit', async (e) => {
             throw new Error('Failed to fetch data');
         }
         const data = await response.json();
-        resultDiv.textContent = `Converted Amount: ${data.result}`;
+        const resultBar = document.createElement('div');
+        resultBar.textContent = `Converted Amount: ${data.result}`;
+        resultDiv.innerHTML = ''; // Clear previous results
+        resultDiv.appendChild(resultBar);
     } catch (error) {
         console.error('Error:', error);
         resultDiv.textContent = 'Failed to fetch data. Please try again.';
