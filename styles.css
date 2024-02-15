@@ -6,46 +6,46 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 600px;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 36px;
+    text-align: center;
     margin-bottom: 20px;
-}
-
-p {
-    font-size: 18px;
-    margin-bottom: 30px;
+    color: #333;
 }
 
 form {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 label {
+    flex: 0 0 30%;
     margin-bottom: 10px;
 }
 
 input {
+    flex: 0 0 60%;
     padding: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
 button {
-    padding: 10px;
+    flex: 0 0 100%;
+    padding: 8px 10px;
+    margin-top: 10px;
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 3px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -55,5 +55,8 @@ button:hover {
 
 #result {
     margin-top: 20px;
-    font-size: 24px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
